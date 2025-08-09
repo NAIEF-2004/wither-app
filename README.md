@@ -1,59 +1,104 @@
-# WeatherApp
+# تطبيق الطقس - Weather App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+تطبيق طقس مبني باستخدام Angular 20 مع واجهة مستخدم عربية جميلة.
 
-## Development server
+## المميزات
 
-To start a local development server, run:
+- 🔍 البحث عن الطقس في أي مدينة
+- 🌡️ عرض درجة الحرارة الحالية
+- 💨 عرض سرعة واتجاه الرياح
+- 🕐 عرض الوقت الحالي
+- 🎨 واجهة مستخدم عربية جميلة ومتجاوبة
+- ⚡ سريع وفعال
 
+## التقنيات المستخدمة
+
+- **Angular 20** - إطار العمل الرئيسي
+- **TypeScript** - لغة البرمجة
+- **SCSS** - لتصميم الواجهة
+- **RxJS** - للتعامل مع البيانات التفاعلية
+- **Open-Meteo APIs** - للحصول على بيانات الطقس
+
+## APIs المستخدمة
+
+1. **Geocoding API**: `https://geocoding-api.open-meteo.com/v1/search`
+   - لتحويل اسم المدينة إلى إحداثيات جغرافية
+
+2. **Weather API**: `https://api.open-meteo.com/v1/forecast`
+   - للحصول على بيانات الطقس الحالية
+
+## التثبيت والتشغيل
+
+### المتطلبات المسبقة
+- Node.js (الإصدار 18 أو أحدث)
+- npm أو yarn
+
+### خطوات التثبيت
+
+1. استنساخ المشروع:
+```bash
+git clone <repository-url>
+cd weather-app
+```
+
+2. تثبيت التبعيات:
+```bash
+npm install
+```
+
+3. تشغيل المشروع:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+4. فتح المتصفح على:
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+### بناء المشروع للإنتاج
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## هيكل المشروع
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+src/
+├── app/
+│   ├── components/
+│   │   └── weather/
+│   │       ├── weather.ts          # مكون الطقس الرئيسي
+│   │       ├── weather.html        # قالب HTML
+│   │       └── weather.scss        # أنماط CSS
+│   ├── services/
+│   │   └── weather.ts              # خدمة الطقس
+│   ├── app.component.ts            # المكون الرئيسي
+│   ├── app.config.ts               # إعدادات التطبيق
+│   └── main.ts                     # نقطة البداية
+└── styles.scss                     # الأنماط العامة
 ```
 
-## Running end-to-end tests
+## الاستخدام
 
-For end-to-end (e2e) testing, run:
+1. أدخل اسم المدينة في حقل البحث
+2. اضغط على زر "بحث" أو اضغط Enter
+3. انتظر تحميل بيانات الطقس
+4. استمتع بمعلومات الطقس الحالية!
 
-```bash
-ng e2e
-```
+## المساهمة
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+نرحب بالمساهمات! يرجى:
+1. عمل Fork للمشروع
+2. إنشاء branch جديد للميزة
+3. عمل Commit للتغييرات
+4. عمل Push للbranch
+5. إنشاء Pull Request
 
-## Additional Resources
+## الترخيص
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+هذا المشروع مرخص تحت رخصة MIT.
+
+## الدعم
+
+إذا واجهت أي مشاكل أو لديك اقتراحات، يرجى إنشاء issue في GitHub.
